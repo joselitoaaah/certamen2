@@ -3,10 +3,11 @@ package com.virginiogomez.certamen2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String USUARIO_CORRECTO = "usuario";
@@ -29,12 +30,8 @@ public class MainActivity extends AppCompatActivity {
         String username = usernameEditText.getText().toString();
         String password = passwordEditText.getText().toString();
 
-        if (username.equals(USUARIO_CORRECTO) && password.equals(CONTRASENA_CORRECTA)) {
-            Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-            intent intent = new intent(this, activity_main2.class);
-            startActivities(intent);
-        } else {
-            Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
-        }
+
     }
+
+
 }
