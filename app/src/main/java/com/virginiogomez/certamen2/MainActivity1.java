@@ -17,7 +17,7 @@ public class MainActivity1 extends AppCompatActivity {
         btnGoToActivity3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Crear una intención para abrir Activity3
+
                 Intent intent = new Intent(MainActivity1.this,MainActivity3.class);
                 startActivity(intent);
             }
