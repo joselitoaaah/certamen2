@@ -35,8 +35,7 @@
         android:layout_marginEnd="107dp"
         android:layout_marginBottom="425dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/editTextText3"
@@ -49,8 +48,7 @@
         android:layout_marginEnd="107dp"
         android:layout_marginBottom="486dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:inputType="text" />
 
     <TextView
         android:id="@+id/textView"
@@ -73,8 +71,7 @@
         android:layout_marginEnd="107dp"
         android:layout_marginBottom="545dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:inputType="text" />
 
     <TextView
         android:id="@+id/textView2"

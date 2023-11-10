@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/usernameEditText"
-        android:layout_width="378dp"
-        android:layout_height="wrap_content"
-        android:hint="Nombre de usuario"
-        android:inputType="text" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="250dp"
+        android:layout_height="28dp"
+        android:text="Jose Fuentes y Jhoset Vasquez"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="676dp" />
 
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="177dp"
+        android:layout_height="39dp"
+        android:text="Aplicacion De Mapa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:layout_width="378dp"
-        android:layout_height="62dp"
-        android:onClick="login"
-        android:text="Iniciar sesión" />
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="135dp"
+        android:layout_height="136dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_map"
+        tools:layout_editor_absoluteY="323dp" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
