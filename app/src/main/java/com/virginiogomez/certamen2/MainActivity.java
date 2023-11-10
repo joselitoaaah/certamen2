@@ -2,36 +2,32 @@ package com.virginiogomez.certamen2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.os.Handler;
+
 
 public class MainActivity extends AppCompatActivity {
-    private static final String USUARIO_CORRECTO = "usuario";
-    private static final String CONTRASENA_CORRECTA = "1234";
 
-    private EditText usernameEditText;
-    private EditText passwordEditText;
+    // Duración del SplashScreen en milisegundos
+    private static final int SPLASH_TIME_OUT = 3000;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        usernameEditText = findViewById(R.id.usernameEditText);
-        passwordEditText = findViewById(R.id.passwordEditText);
+        // Utiliza un Handler para retrasar la navegación a la pantalla principal
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Crea un Intent para ir a la pantalla principal
+                Intent intent = new Intent(MainActivity.this, MainActivity1.class);
+                startActivity(intent);
+
+                // Cierra esta actividad para evitar que el usuario regrese al SplashScreen al presionar "Atrás"
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
     }
-
-    public void login(View view) {
-        String username = usernameEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
-
-
-    }
-
-
 }
