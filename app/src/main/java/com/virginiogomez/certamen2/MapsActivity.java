@@ -33,11 +33,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng Unach03 = new LatLng(-36.589673,-72.082447);
+        mMap.addMarker(new MarkerOptions().position(Unach03).title("IPVG"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(Unach03));
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +47,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (intent != null) {
             double latitud1 = Double.parseDouble(intent.getStringExtra("LATITUD_1"));
             double longitud1 = Double.parseDouble(intent.getStringExtra("LONGITUD_1"));
-            String latitud2 = intent.getStringExtra("LATITUD_2");
-            String longitud2 = intent.getStringExtra("LONGITUD_2");
-            String latitud3 = intent.getStringExtra("LATITUD_3");
-            String longitud3 = intent.getStringExtra("LONGITUD_3");
+            double latitud2 = Double.parseDouble(intent.getStringExtra("LATITUD_2"));
+            double longitud2 = Double.parseDouble(intent.getStringExtra("LONGITUD_2"));
+            double latitud3 = Double.parseDouble(intent.getStringExtra("LATITUD_3"));
+            double longitud3 = Double.parseDouble(intent.getStringExtra("LONGITUD_3"));
 
             // Haz lo que quieras con las coordenadas en MapsActivity
-            LatLng sydney = new LatLng(latitud1, longitud1);
+
+
+            LatLng cords1 = new LatLng(latitud1, longitud1);
+            LatLng cords2 = new LatLng(latitud2, longitud2);
+            LatLng cords3 = new LatLng(latitud3, longitud3);
+
+
+
+
+
+
+
+            mMap.addMarker(new MarkerOptions().position(cords1).title("coordenadas 1"));
+            mMap.addMarker(new MarkerOptions().position(cords2).title("coordenadas 2"));
+            mMap.addMarker(new MarkerOptions().position(cords3).title("coordenadas 3"));
+            mMap.setMinZoomPreference(10.0f);
+            mMap.setMaxZoomPreference(50.0f);
         }
 }
 }
